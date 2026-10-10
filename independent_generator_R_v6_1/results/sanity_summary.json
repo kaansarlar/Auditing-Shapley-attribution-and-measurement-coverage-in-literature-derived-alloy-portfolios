@@ -1,0 +1,8 @@
+{
+ "n": 20,
+ "K_obs_min": 32,
+ "rho_min": 0.9999999999999999,
+ "rho_median": 0.9999999999999999,
+ "top_correct": 0.9,
+ "material_error": 0.1
+}
