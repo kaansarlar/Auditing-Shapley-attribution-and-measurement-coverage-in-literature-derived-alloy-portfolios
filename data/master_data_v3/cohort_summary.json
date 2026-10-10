@@ -1,0 +1,20 @@
+{
+  "counts": {
+    "full": 199,
+    "unique": 141,
+    "strict_tc": 72,
+    "strict_3d_tm": 25,
+    "phase": 71,
+    "dsref_primary": 123,
+    "dsref_0p5T": 136,
+    "dsref_strict_0p5T": 111
+  },
+  "representation": {
+    "primary": "formula-derived fractions and recomputed descriptors for 188 rows; element-block fallback for 11 pseudo-binary rows",
+    "sensitivity": "audited source-block fractions and descriptors retained in *_source_block fields",
+    "confirmed_row_alignment_corrections": 21,
+    "formula_block_discrepancies_gt_0p01": 78,
+    "unconfirmed_after_alignment": 57,
+    "S30_note": "Source reports approximately 13.5 at.% Al by EDS; nominal formula gives about 15.0 at.% Al; the retained source block gives about 7.9 at.% Al. Representation sensitivity is required."
+  }
+}
