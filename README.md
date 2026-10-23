@@ -88,7 +88,7 @@ Cite the author, title, repository URL and the actual commit used; machine-reada
 Related source audits and datasets:
 
 1. Şarlar K (2026), *Machine learning screening of magnetocaloric high-entropy alloys using a field-normalized ΔSref target*, Journal of Magnetism and Magnetic Materials 650, 174120. [10.1016/j.jmmm.2026.174120](https://doi.org/10.1016/j.jmmm.2026.174120).
-2. Şarlar K (2026), *Full text target auditing reveals chemistry regime confounding in composition only Curie temperature screening*. [10.5281/zenodo.23102726](https://doi.org/10.5281/zenodo.23102726).
+2. Şarlar K (2026), *Target auditing exposes chemistry-regime dependence in Curie-temperature models for magnetocaloric high-entropy alloys*. [10.5281/zenodo.23102726](https://doi.org/10.5281/zenodo.23102726).
 
 Retain attribution to the original experimental publications identified in the data. The shared audit is a data source; the present study addresses portfolio-game attribution and measurement coverage.
 
