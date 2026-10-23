@@ -1,4 +1,4 @@
-# Diagnosing Shapley identifiability in magnetocaloric high-entropy alloy portfolios
+# Auditing Shapley attribution and measurement coverage in literature-derived alloy portfolios
 
 Data and analysis code for assessing game-theoretic candidate selection and elemental attribution in literature-derived magnetocaloric alloy portfolios.
 
