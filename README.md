@@ -83,7 +83,7 @@ Completion bounds assume a bounded monotone game and preservation of the observe
 
 ## Citation and archive
 
-Cite the author, title, repository URL and the actual commit used; machine-readable metadata are in `CITATION.cff`. The original source release remains available at [10.5281/zenodo.23279674](https://doi.org/10.5281/zenodo.23279674); it predates the measurement-coverage extension. The [Zenodo version family](https://doi.org/10.5281/zenodo.23279673) provides version-specific archive records. A GitHub source update alone does not update the Zenodo files.
+Cite the author, title, repository URL and the actual commit used; machine-readable metadata are in `CITATION.cff`. The version 8.0.0 source snapshot (commit `c6217e57ac24075a9fa9d421a10f730dcfb0b019`), archived numerical evidence and reproduced measurement-coverage outputs are available at [10.5281/zenodo.23602541](https://doi.org/10.5281/zenodo.23602541). Subsequent citation-metadata updates do not change that archived analysis snapshot. The original source release remains at [10.5281/zenodo.23279674](https://doi.org/10.5281/zenodo.23279674); it predates the measurement-coverage extension. The [Zenodo version family](https://doi.org/10.5281/zenodo.23279673) provides all published versions.
 
 Related source audits and datasets:
 

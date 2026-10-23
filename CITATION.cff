@@ -11,3 +11,4 @@ version: "8.0.0"
 date-released: "2026-10-23"
 repository-code: "https://github.com/kaansarlar/Auditing-Shapley-attribution-and-measurement-coverage-in-literature-derived-alloy-portfolios"
 license: MIT
+doi: "10.5281/zenodo.23602541"
