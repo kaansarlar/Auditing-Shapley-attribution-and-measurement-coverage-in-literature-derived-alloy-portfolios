@@ -1,0 +1,12 @@
+# Generated analyses and figures are local products, not repository inputs.
+results/
+**/results/
+outputs/
+figures/
+*.log
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.DS_Store

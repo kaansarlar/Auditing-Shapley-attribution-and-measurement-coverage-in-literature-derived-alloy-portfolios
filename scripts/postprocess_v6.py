@@ -178,7 +178,7 @@ def main():
     hea_summary = summarize_hea(hea)
     hea_summary.to_csv(OUT / "hea_exact_match_summary_v6.csv", index=False)
 
-    independent = pd.read_csv(RESULTS / "legacy_independent_generator_4000.csv")
+    independent = pd.read_csv(RESULTS / "robustness_generator_R" / "bench_all.csv")
     independent_summary = summarize_independent(independent)
     independent_summary.to_csv(OUT / "independent_generator_summary_v6.csv", index=False)
     make_figure(comparison, hea_summary)

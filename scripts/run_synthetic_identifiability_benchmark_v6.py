@@ -21,7 +21,7 @@ from sklearn.tree import DecisionTreeClassifier, export_text
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "results" / "synthetic_identifiability_benchmark_v6"
+OUT = ROOT / "results" / "primary_generator_v5"
 PLAYERS = ("Mn", "Cr", "Ni", "Al", "Cu")
 N_PLAYERS = len(PLAYERS)
 MASKS = np.arange(2**N_PLAYERS, dtype=int)

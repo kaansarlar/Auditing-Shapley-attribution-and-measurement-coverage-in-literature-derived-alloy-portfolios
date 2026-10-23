@@ -1,26 +1,30 @@
-"""Run focused frozen-result, generator-sanity and final-document checks without long simulations."""
+"""Numerical checks from source; no archived outputs or document files needed."""
 from pathlib import Path
-import json,runpy,unittest,contextlib,io,time
+import runpy,sys
 ROOT=Path(__file__).resolve().parents[1]
 
 def main():
-    counts={};start=time.time()
-    for rel in ['tests/test_synthetic_identifiability_benchmark_v6.py','independent_generator_R_v6_1/tests/test_v6_robustness_generator.py']:
-        ns=runpy.run_path(str(ROOT/rel));count=0
-        for name,fn in ns.items():
-            if name.startswith('test_') and callable(fn):fn();count+=1
-        counts[rel]=count
-    suite=unittest.TestSuite()
-    for rel in ['tests/test_v6_2_additions.py','tests/test_v7_final.py']:
-        ns=runpy.run_path(str(ROOT/rel))
-        for obj in ns.values():
-            if isinstance(obj,type) and issubclass(obj,unittest.TestCase):suite.addTests(unittest.defaultTestLoader.loadTestsFromTestCase(obj))
-    result=unittest.TextTestRunner(verbosity=1).run(suite)
-    assert result.wasSuccessful()
-    total=sum(counts.values())+result.testsRun
-    summary={'generator_function_tests':counts,'unittest_checks':result.testsRun,'total_passed':total,
-        'long_4000_and_9000_world_runs_repeated':False,'new_analyses_regenerated':True,'elapsed_seconds':round(time.time()-start,2),
-        'scope':'Frozen benchmark outputs, generator sanity, completion witnesses, decisions, references, prose display citations and native equations.'}
-    (ROOT/'results/v7_final_additions/validation_report.json').write_text(json.dumps(summary,indent=2))
-    print(json.dumps(summary,indent=2))
+ count=0
+ for rel in ['tests/test_synthetic_identifiability_benchmark_v6.py','independent_generator_R_v6_1/tests/test_v6_robustness_generator.py']:
+  namespace=runpy.run_path(str(ROOT/rel))
+  for name,function in namespace.items():
+   if name.startswith('test_') and callable(function):
+    function();print('PASS '+name);count+=1
+ sys.path.insert(0,str(ROOT/'extension'))
+ from run_acquisition import checks
+ checks();count+=1
+ sys.path.insert(0,str(ROOT/'scripts'))
+ import pandas as pd
+ import numpy as np
+ from run_empirical_nash_shapley import prepare_portfolio,add_utilities
+ from audit_portfolio import audit
+ frame,_=add_utilities(prepare_portfolio(pd.read_csv(ROOT/'data/master_data_v3/master_strict_tc_72.csv')))
+ report,_=audit(frame,['Mn','Cr','Ni','Al','Cu'])
+ assert report['eligible_records']==17 and report['unique_supports']==4
+ assert report['veto_players']==['Cr'] and report['equivalent_incidence_pairs']==[['Mn','Al']]
+ np.testing.assert_allclose(list(report['observed_access_shapley'].values()),
+  [.1999337155,.3997727459,.1006670293,.1999337155,.046961031],atol=1e-9)
+ assert abs(report['efficiency_residual'])<1e-12
+ count+=1
+ print(f'{count} source-based checks passed. Long simulation runs are separate stages.')
 if __name__=='__main__':main()

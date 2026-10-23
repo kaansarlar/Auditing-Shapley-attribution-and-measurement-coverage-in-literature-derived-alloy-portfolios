@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite the author, study title, repository and the exact commit used."
+type: software
+title: "Auditing Shapley attribution and measurement coverage in literature-derived alloy portfolios"
+authors:
+  - family-names: "Şarlar"
+    given-names: "Kağan"
+    affiliation: "Karamanoğlu Mehmetbey University"
+    orcid: "https://orcid.org/0000-0002-8871-2357"
+version: "8.0.0"
+date-released: "2026-10-23"
+repository-code: "https://github.com/kaansarlar/Auditing-Shapley-attribution-and-measurement-coverage-in-literature-derived-alloy-portfolios"
+license: MIT

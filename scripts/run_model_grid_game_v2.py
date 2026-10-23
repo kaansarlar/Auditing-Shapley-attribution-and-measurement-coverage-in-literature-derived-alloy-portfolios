@@ -18,7 +18,7 @@ warnings.filterwarnings("ignore")
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "master_data_v3" / "master_full_199.csv"
-GRID = ROOT / "inputs" / "grid_3dTM.csv"
+GRID = ROOT / "inputs" / "grid_3dTM.csv.gz"
 OUT = ROOT / "results" / "model_grid_game_v3"
 FEATURES = ["VEC_c", "sigma_c", "dHmix_c", "dSmix_c", "dX_c"]
 BACKGROUND = ["Fe", "Co"]

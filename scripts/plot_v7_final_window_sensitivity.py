@@ -6,6 +6,8 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 ROOT=Path(__file__).resolve().parents[1]
+OUT=ROOT/'results/temperature_window_sensitivity_v3'
+OUT.mkdir(parents=True,exist_ok=True)
 s=pd.read_csv(ROOT/'results/temperature_window_sensitivity_v3/window_shapley.csv')
 w=pd.read_csv(ROOT/'results/temperature_window_sensitivity_v3/window_summary.csv')
 fig,ax=plt.subplots(1,2,figsize=(11.5,4.7))
@@ -32,4 +34,5 @@ for i,a in enumerate(ax):
  a.text(-.12,1.13,chr(97+i),transform=a.transAxes,fontweight='bold',fontsize=13)
 fig.subplots_adjust(top=.79,bottom=.13,wspace=.28)
 for ext in ['png','pdf','svg']:
- fig.savefig(ROOT/'figures'/f'Figure_S2_window_sensitivity_v7_final.{ext}',dpi=240,bbox_inches='tight')
+ fig.savefig(OUT/f'Figure_S2_window_sensitivity_v7_final.{ext}',dpi=240,bbox_inches='tight')
+plt.close(fig)

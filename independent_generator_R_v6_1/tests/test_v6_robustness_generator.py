@@ -20,8 +20,3 @@ def test_case_study_diagnostics():
     pl=['Mn','Cr','Ni','Al','Cu']; S=[['Cr','Ni'],['Cr','Ni','Cu'],['Mn','Cr','Al'],['Mn','Cr','Ni','Al']]
     sup=np.array([sum(1<<pl.index(e) for e in s) for s in S]); d=diagnostics(sup,np.array([0,0,1,2]))
     assert (d['K_obs'],d['rank_main'],d['veto'],d['equiv_pairs'],d['players_with_contrast'])==(4,4,1,1,2)
-def test_v6_summary_consistency():
-    import json
-    S=json.load(open(pathlib.Path(__file__).resolve().parents[1]/'results'/'robustness_summary_v6_1.json'))
-    vo=S['unique_top_vs_random']['veto only']; assert vo['diff_ci'][0]<0<vo['diff_ci'][1]
-    assert S['hea_matched']['worlds']==288 and S['hea_matched']['top_is_veto']==1.0

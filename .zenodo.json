@@ -1,0 +1,28 @@
+{
+  "title": "Auditing Shapley attribution and measurement coverage in literature-derived alloy portfolios: data and reproducible code",
+  "upload_type": "software",
+  "version": "8.0.0",
+  "creators": [
+    {
+      "name": "Şarlar, Kağan",
+      "affiliation": "Karamanoğlu Mehmetbey University",
+      "orcid": "0000-0002-8871-2357"
+    }
+  ],
+  "description": "Data and source code for the empirical portfolio audit, bounded monotone completion analysis, separately reported complete-design simulation generators, and paired measurement-coverage extension. GitHub tracks data and reproducible code; generated results are local outputs. Original experimental sources are identified in the data.",
+  "keywords": [
+    "Shapley value",
+    "identifiability",
+    "magnetocaloric alloys",
+    "measurement coverage",
+    "reproducibility"
+  ],
+  "notes": "Supported by TÜBİTAK Career Development Program (3501), Project No. 125F375. MIT applies to original project software; source-specific terms apply to literature-derived data.",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/kaansarlar/Auditing-Shapley-attribution-and-measurement-coverage-in-literature-derived-alloy-portfolios",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
